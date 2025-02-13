@@ -10,7 +10,7 @@ namespace MongoDBPrdoducts.Data
 
         public MongoCRUD(string database)
         {
-            var client = new MongoClient();
+            var client = new MongoClient("mongodb+srv://admin:admin@heliascluster.nfp20.mongodb.net/<database>?retryWrites=true&w=majority");
             db = client.GetDatabase(database);
         }
 
