@@ -10,10 +10,10 @@ namespace MongoDBPrdoducts.Data
 
         public MongoCRUD(string database)
         {
-            var client = new MongoClient("mongodb+srv://admin:admin@heliascluster.nfp20.mongodb.net/<database>?retryWrites=true&w=majority");
+            var client = new MongoClient();
             db = client.GetDatabase(database);
         }
-
+        //Hej
         //Add product
         public async Task<List<Products>> AddProduct(string table, Products product)
         {
